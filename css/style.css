@@ -1,8 +1,237 @@
-/* 
-    Summer Hacks
-    SOA Code Room
-    Project Template
-    Use this template: https://github.com/SOACodeRoom/summerhacks-projectName/generate
-    style.css: You will write your css code for your portfolio website here. You can add other css files too but it must be under "css" folder.
 
-*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    padding:0;
+    margin:0;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow: scroll;
+}
+header{
+    position: fixed;
+    height: 80px;
+    width:100%;
+    z-index:1000;
+}
+header h4{
+    position:absolute;
+    color: #fff;
+    left: 80px;
+    padding: 10px;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    letter-spacing: 4px;
+}
+header nav{
+    position: relative;
+    
+    height:80px;
+    width:100%;
+}
+header nav ul{
+    display: flex;
+    position:relative;
+    
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+   
+}
+header nav ul li{
+    padding: 15px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header nav ul li a{
+    color: #9ddfd3;
+    font-size: 1.3em;
+    letter-spacing: 1.5px;
+    padding: 5px 10px;
+    transition: 0.75s ease-in-out;
+    /*box-shadow: 0px 3px 20px rgba(0,0, 0, 0.2);*/
+}
+header nav ul li .main{
+    background:#9ddfd3;
+    color:#31326f ;
+}
+header nav ul li a:hover{
+    background:#9ddfd3;
+    color:#31326f ;
+    transform: scale(1.1) ;
+    
+}
+
+section{
+    height: 100vh;
+    width:100%;
+}
+#home {
+    background: #31326f;
+}
+
+#home img{
+    height:100%;
+    width:100%;
+    background-position: center;
+    object-fit:cover;
+    opacity: 0.4;
+
+}
+#home .intro{
+    position:absolute;
+    backdrop-filter: blur(4px);
+    top: 25%;
+    left:10%;
+    height: 70%;
+    width: 70%;
+    background: rgba(219,246,233,0.5);
+}
+
+#home .intro h3{
+    padding:15px 10px;
+    margin: 0 10px;
+    border-bottom: 1px solid #31326f; 
+    font-size: 5em;
+    color:#31326f;
+    font-weight: lighter;
+}
+#home .intro p{
+    font-size: 1.6em;
+    padding: 20px;
+    color:#31326f;
+}
+#about{
+    display: flex;
+    align-items: center;
+    background:linear-gradient(to bottom, rgba(219,246,233,0.7), rgba(255,201,60,1));
+}
+ .container{
+    height:80%;
+    width:80%;
+    background: #dbf6e9;
+    margin:auto;
+    border-radius: 20px;
+    top:80px;
+    display: flex;
+    align-items: stretch;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+ .container .section{
+    font-size: 10vw;
+    padding: 50px 15px;
+    color: #31326f;
+    background: #9ddfd3;
+    padding: auto;
+    width: 40%;
+    border-radius: 20px;
+}
+#about .container .bio{
+    width: 60%;
+    font-size: 1.3em;
+    line-height: 2em;
+    padding: 70px 25px;
+    color: #31326f;
+
+}
+#hobbies{
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right,#31326f,#9ddfd3 );
+}
+#hobbies .container .skills{
+    width:60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+#hobbies .container .skills .skill{
+    width:100%;
+    display: inline-block;
+}
+#hobbies .container .skills .skill p{
+    width:fit-content;
+    display: inline-block;
+    padding: 20px;
+    text-align:left;
+    font-size: 30px;
+    color:#31326f;
+    font-weight:500;
+}
+#hobbies .container .skills .skill .meter{
+    position: absolute;
+    
+    right: 15%;
+    margin-top:35px;
+    width: 300px;
+    height: 8px;
+    background:#9ddfd3;
+    border-radius: 20px;
+}
+.meter >span{
+    position: absolute;
+    height:8px;
+    background: #31326f;
+    border-radius: 20px;
+}
+.meter >span>span{
+    position: absolute;
+    font-size: 20px;
+    margin: 10px 0 0 10px;
+}
+#goals{
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right,#31326f,#9ddfd3 );
+}
+
+#goals .container{
+    height:80%;
+    width:80%;
+    background: #9ddfd3;
+    margin:auto;
+    border-radius: 20px;
+    top:80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+#goals .container .card{
+    height:90%;
+    width: 30%;
+    
+    border-radius: 20px;
+    
+}
+#goals .container .card img{
+    height:60%;
+    width: 100%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    
+    
+    object-fit: cover;
+}
+#goals .container .card .info{
+    height: 40%;
+    width: 100%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: #dbf6e9;
+    color:#31326f;
+    font-size: 3em;
+    font-weight:500;
+    padding:18px;
+}
